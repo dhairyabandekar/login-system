@@ -17,6 +17,10 @@ connectDB();
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("🚀 Login System Backend is Running Successfully");
+});
+
 app.use("/api/auth", authRoutes);
 
 
